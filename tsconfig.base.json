@@ -21,6 +21,7 @@
       "@app/auth/*": ["libs/auth/src/lib/*"],
       "@app/core/*": ["services/core/src/*"],
       "@app/env": ["environments/environment.serverless.ts"],
+      "@app/fleet-management/*": ["services/fleet-management/src/*"],
       "@app/http/*": ["libs/http/src/lib/*"],
       "@app/infrastructure/*": ["libs/infrastructure/src/lib/*"],
       "@app/messaging/*": ["libs/messaging/src/lib/*"]

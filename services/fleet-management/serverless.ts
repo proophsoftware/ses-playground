@@ -1,0 +1,30 @@
+import type { Serverless } from 'serverless/aws';
+import { baseServerlessConfig } from '../../serverless.base';
+
+const serverlessConfig: Partial<Serverless> = {
+  ...baseServerlessConfig,
+  service: 'FleetManagement',
+  custom: {
+    ...baseServerlessConfig.custom,
+    'serverless-offline': {
+      lambdaPort: 3005,
+      httpPort: 3006,
+    },
+  },
+  functions: {
+    'consume-events': {
+      handler: 'src/http/events-handler.main',
+      events: [
+        {
+          http: {
+            method: 'post',
+            path: '/fleet-management/api/messages/events/consume',
+            cors: true,
+          },
+        },
+      ],
+    },
+  },
+};
+
+module.exports = serverlessConfig;

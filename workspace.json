@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "FleetManagement": "services/fleet-management",
     "core": "services/core",
     "http": "libs/http",
     "infrastructure": "libs/infrastructure",

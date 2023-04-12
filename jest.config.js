@@ -4,5 +4,6 @@ module.exports = {
     '<rootDir>/services/core',
     '<rootDir>/libs/messaging',
     '<rootDir>/libs/infrastructure',
+    '<rootDir>/services/fleet-management',
   ],
 };
