@@ -33,6 +33,16 @@ const serverlessConfig: Partial<Serverless> = {
           cors: true
         }
       }]
+    },
+    'update-car': {
+      handler: 'src/http/update-car-handler.main',
+      events: [{
+        http: {
+          method: 'post',
+          path: '/fleet-management/api/messages/update-car',
+          cors: true
+        }
+      }]
     }
   },
 };
