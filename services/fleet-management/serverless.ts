@@ -24,6 +24,16 @@ const serverlessConfig: Partial<Serverless> = {
         },
       ],
     },
+    'add-car-to-fleet': {
+      handler: 'src/http/add-car-to-fleet-handler.main',
+      events: [{
+        http: {
+          method: 'post',
+          path: '/fleet-management/api/messages/add-car-to-fleet',
+          cors: true
+        }
+      }]
+    }
   },
 };
 
