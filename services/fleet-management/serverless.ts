@@ -43,6 +43,26 @@ const serverlessConfig: Partial<Serverless> = {
           cors: true
         }
       }]
+    },
+    'get-car-list': {
+      handler: 'src/http/get-car-list-handler.main',
+      events: [{
+        http: {
+          method: 'get',
+          path: '/fleet-management/api/messages/get-car-list',
+          cors: true
+        }
+      }]
+    },
+    'get-car': {
+      handler: 'src/http/get-car-handler.main',
+      events: [{
+        http: {
+          method: 'get',
+          path: '/fleet-management/api/messages/get-car',
+          cors: true
+        }
+      }]
     }
   },
 };
