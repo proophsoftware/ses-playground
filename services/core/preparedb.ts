@@ -2,6 +2,7 @@ import { getConfiguredEventStore, PUBLIC_STREAM, WRITE_MODEL_STREAM } from "@app
 import { getConfiguredDocumentStore } from "@app/core/configuredDocumentStore";
 import { PostgresDocumentStore } from "@app/infrastructure/DocumentStore/PostgresDocumentStore";
 import { CAR_COLLECTION } from "@app/fleet-management/model/car/repository";
+import { MOBILITYOFFER_COLLECTION } from "@app/fleet-management/model/mobility-offer/repository";
 
 const eventStore = getConfiguredEventStore();
 const documentStore = getConfiguredDocumentStore();
@@ -36,7 +37,8 @@ interface Collection {
 }
 
 const collections: Collection[] = [
-  { name: CAR_COLLECTION }
+  { name: CAR_COLLECTION },
+  { name: MOBILITYOFFER_COLLECTION }
 ];
 
 const isPostgresStore = documentStore instanceof PostgresDocumentStore;

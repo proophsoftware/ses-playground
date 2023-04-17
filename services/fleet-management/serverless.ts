@@ -63,6 +63,16 @@ const serverlessConfig: Partial<Serverless> = {
           cors: true
         }
       }]
+    },
+    'draft-mobility-offer': {
+      handler: 'src/http/draft-mobility-offer-handler.main',
+      events: [{
+        http: {
+          method: 'post',
+          path: '/fleet-management/api/messages/draft-mobility-offer',
+          cors: true
+        }
+      }]
     }
   },
 };
