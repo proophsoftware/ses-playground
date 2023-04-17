@@ -1,5 +1,6 @@
 export interface Car {
     vehicleId: string;
+    completed?: boolean;
 }
 
 export const makeCar = (state: Partial<Car>): Car => {
