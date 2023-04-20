@@ -93,6 +93,26 @@ const serverlessConfig: Partial<Serverless> = {
           cors: true
         }
       }]
+    },
+    'get-mobility-offer': {
+      handler: 'src/http/get-mobility-offer-handler.main',
+      events: [{
+        http: {
+          method: 'get',
+          path: '/fleet-management/api/messages/get-mobility-offer',
+          cors: true
+        }
+      }]
+    },
+    'get-mobility-offer-list': {
+      handler: 'src/http/get-mobility-offer-list-handler.main',
+      events: [{
+        http: {
+          method: 'get',
+          path: '/fleet-management/api/messages/get-mobility-offer-list',
+          cors: true
+        }
+      }]
     }
   },
 };
